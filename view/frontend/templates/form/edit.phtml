@@ -18,7 +18,7 @@
         <div class="field linkedin_profile required" data-container="change-linkedin_profile">
             <label class="label" for="linkedin_profile"><span><?= $block->escapeHtml(__('Linkedin profile')) ?></span></label>
             <div class="control">
-                <input type="text" name="linkedin_profile" id="linkedin_profile" autocomplete="Linkedin profile" data-input="change-linkedin_profile" value="<?= $block->escapeHtmlAttr($block->getCustomer()->getCustomAttribute('linkedin_profile')->getValue()) ?>" title="<?= $block->escapeHtmlAttr(__('Linkedin profile')) ?>" class="input-text" data-validate="{required:true, 'validate-email':true}" />
+                <input type="text" maxlength="250" name="linkedin_profile" id="linkedin_profile" autocomplete="Linkedin profile" data-input="change-linkedin_profile" value="<?= $block->escapeHtmlAttr($block->getCustomer()->getCustomAttribute('linkedin_profile')->getValue()) ?>" title="<?= $block->escapeHtmlAttr(__('Linkedin profile')) ?>" class="input-text" data-validate="{required:false, 'validate-url':true}" />
             </div>
         </div>
         <?php endif; ?>
